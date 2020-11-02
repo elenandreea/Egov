@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get a ticket!</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="banner-image"></div>
+<form id="form-user" action="#" method="post">
+    <div id="prenume" class="form-box error" data-errormsg="">
+        <label for="input-first">Prenume*</label>
+        <input type="text" id="input-first" autofocus placeholder="Prenume" />
+    </div>
+    <div id="nume" class="form-box error" data-errormsg="">
+        <label for="input-last">Nume*</label>
+        <input type="text" id="input-last" autofocus placeholder="Nume" />
+    </div>
+    <div id="cnp" class="form-box error" data-errormsg="">
+        <label for="input-cnp">CNP*</label>
+        <input type="text" id="input-cnp" autofocus placeholder="CNP" />
+    </div>
+    <div id="sex" class="form-box error" data-errormsg="">
+        <label for="input-sex">Sex*</label>
+        <input type="text" id="input-sex" autofocus placeholder="Sex" disabled />
+    </div>
+    <div id="data_nasterii" class="form-box error" data-errormsg="">
+        <label for="input-nastere">Data nasterii*</label>
+        <input type="text" id="input-nastere" autofocus placeholder="Data nasterii" disabled />
+    </div>
+    <div id="adresa_email" class="form-box error" data-errormsg="">
+        <label for="input-email">Adresa de email*</label>
+        <input type="text" id="input-email"  required placeholder="Adresa de email" />
+    </div>
+    <div id="seat-type" class="form-box" data-errormsg="">
+        <label for="input-seat">Alege locul*</label>
+        <select id="input-seat">
+            <option value="Standard">Standard(Sala)</option>
+            <option value="VIP">VIP(Tribuna)</option>
+        </select>
+    </div>
+    <div id="VIP" class="form-box label" data-errormsg="" hidden>
+        <label for="input-VIP">Doresc si acces in culise</label>
+        <input type="checkbox" id="input-VIP" value="yes" />
+    </div>
+    <div class="form-box error" data-errormsg="">
+        <label for="input-iban">IBAN*</label>
+        <input type="text" id="input-iban" autofocus placeholder="IBAN" />
+    </div>
+    <div id="total" class="form-box error" data-errormsg="">
+        <label for="input-suma">Total de plata*</label>
+        <input type="text" id="input-suma" autofocus placeholder="60" disabled />
+    </div>
+    <div class="form-box" data-errormsg="">
+        <label for="input-acord">Sunt de acord*</label>
+        <input type="checkbox" id="input-acord" value="yes" />
+    </div>
+    <div class="form-box">
+        <button id="button-cancel">Cancel</button>
+        <button id="button-submit">Submit</button>
+    </div>
+</form>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- jsPDF library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+<script src="form.js"></script>
+<script src="downloadPDF.js"></script>
+<script src="sendToFirebase.js"></script>
+<script src="XMLWriter.js"></script>
+<script src="sendToXML.js"></script>
+</body>
+</html>
